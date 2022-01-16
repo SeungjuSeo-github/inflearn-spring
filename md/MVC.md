@@ -15,7 +15,7 @@ Model-View-Controller 이루어져있다.
 - 데이터를 받고 그리는 역할을 수행한다.
 - 모델이나 데이터베이스와는 소통하지 않고 컨트롤러와만 소통한다.
 - 컨트롤러에게 액션이나 데이터를 전달만 하고 전달 받기만 한다.
-    -실제로 렌더링되어 보이는 Page 담당
+    - 실제로 렌더링되어 보이는 Page 담당
         - 예: jsp 등
     
 ## :THREE: `Controller` 란?
@@ -24,10 +24,12 @@ Model-View-Controller 이루어져있다.
 - 모델이 데이터를 어떻게 처리할지 알려주고 그 결과를 뷰에 전달해주는 역할
 - 모델에게 전달해주기 전에 데이터를 가공할 수 있다.
 - 뷰에게 모델에게 받은 데이터를 가공할 수 있다.
-<br/>
-- Controller —> Service —> Dao —> DB
   - 이용자의 요청을 받고, 응답을 주는 Logic 담당
     - 예: HTTP Method GET, POST 등의 URL Mapping
+    <br/>
+    
+- Controller —> Service —> Dao —> DB
+ 
 
 
 #### Spring MVC Module을 사용하여 Back End Programming의 기본 프레임 워크를잡는다. WEB Server에 특화되어 만들어진 모듈이기 때문에 개발자가 개발해야 할 영역을 더 적게 만들어 주기 때문에 이것을 사용하지 않았을 때 보다 더 깔끔하고, 간편하게 개발 할 수 있다.
