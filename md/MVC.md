@@ -5,12 +5,14 @@
 - test
 
 ## :TWO: View 란?
-
+- test
+- test
 
 ## :THREE: Controller 란?
-
- `멤버 클래스` test test
+- test
+- test
+- 
+`멤버 클래스` test test
 ```java
-public void ...
+//public void ...
 ```
-
