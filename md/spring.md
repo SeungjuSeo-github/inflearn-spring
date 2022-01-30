@@ -50,7 +50,6 @@ JAVA를 이용한 기술은 JSP, MyBatis, JPA 등 여러가지가 있는데
 > : 이를 제어의 역전(IoC: Inversion of Control)이라고 한다.
 
 
-
 <br/>
 
 ### `Spring 주요 특징` 
