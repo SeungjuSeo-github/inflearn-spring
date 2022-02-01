@@ -52,6 +52,19 @@ JAVA를 이용한 기술은 JSP, MyBatis, JPA 등 여러가지가 있는데
 <br/>
 
 ### `Spring 주요 특징` 
+> Spring은 개발을 더 쉽게 해주는 프로그램 틀이다. 개발을 더 쉽게 해주는 기술들이 Spring에 존재하는데,
+1. Container(컨테이너)
+2. IoC(Inversion of Control, 제어 역전)
+3. DI(Dependency Injection, 의존성 주입)
+4. AOP(Aspect Object Programming, 관점 지향 프로그래밍)
+5. POJO(Plain Old Java Object) 방식
+6. 트랜잭션 관리 프레임워크
+7. 모델-뷰-컨트롤러 패턴
+8. 배치 프레임워크
+
+✒️ 즉 공통 부분의 소스 코딩이 용이하며 확장성도 매우 높다.
+
+
 
 ### `Spring 장점`
 
