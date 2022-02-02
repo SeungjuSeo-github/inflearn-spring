@@ -87,7 +87,14 @@ JAVA를 이용한 기술은 JSP, MyBatis, JPA 등 여러가지가 있는데
 ### `API (Application Programming Interface)` 란?
 > -API를 사용하면 구현 방식을 알지 못하는 제품 또는 서비스와도 통신할 수 있으며 애플리케이션 개발을 간소화하여 시간과 비용을 절약할 수 있다.
 (어떤 특정 사이트에서 특정 데이터를 공유할 경우 어떠한 방식으로 정보를 요청해야 하는지, 그리고 어떠한 데이터를 제공 받을 수 있을지에 대한 규격)
--------------------------------------------
+
+@ResponseBody를 사용
+- HTTP의 BODY에 문자 내용을 직접반환한다
+- 'viewResover'대신에 'HttpMessageConverter'가 동작
+- 기본문자처리: StringConverter
+- 기본객체처리: JsonConverter
+- byte처리 등 기타 여러 HttpMassageConverter가 기본으로 등록되어 있다
+ -------------------------------------------
 ### `AJAX (Asynchronous Javascript And XML)` 란?
 
 >- Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자
