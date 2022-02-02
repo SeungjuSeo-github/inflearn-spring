@@ -51,7 +51,7 @@ JAVA를 이용한 기술은 JSP, MyBatis, JPA 등 여러가지가 있는데
 
 <br/>
 
-### `Spring 주요 특징 및 장점` 
+### Spring 주요 특징 및 장점
 > Spring은 개발을 더 쉽게 해주는 프로그램 틀이다. 
 > 개발을 더 쉽게 해주는 기술들이 Spring에 존재하는데,
 > 1. Container(컨테이너)
