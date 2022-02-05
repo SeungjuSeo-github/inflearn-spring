@@ -5,6 +5,7 @@
 ✔️[MVC 란?](/md/MVC.md) </br>
 ✔️[build 란?](/md/build.md) </br>
 ✔️[@Annotation 이란?](/md/annotation.md) </br>
+✔️[Entity, DTO, VO란?](/md/EDV.md) </br>
 ✔️[추가 정리 필요한거](/md/other.md) 
 
 <hr/>
