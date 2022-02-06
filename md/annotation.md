@@ -25,4 +25,27 @@
 
 ### Qualifier("***")
 
+## RequiredArgsConstructor
+
+### @Controller
+
+### @RestController
+
+### @Service
+
+### @Repository
+
+### @RequestMapping
+
+### @ModelAttribute
+
+### @RequestParam
+
+### @PathVariable
+
+### @Data
+
+### @ExceptionHandler(ExceptionClassName.class)
+
+### @ControllerAdvice
 
