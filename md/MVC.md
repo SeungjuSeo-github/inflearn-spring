@@ -33,6 +33,4 @@ Model-View-Controller 이루어져있다.
 
 
 #### Spring MVC Module을 사용하여 Back End Programming의 기본 프레임 워크를잡는다. WEB Server에 특화되어 만들어진 모듈이기 때문에 개발자가 개발해야 할 영역을 더 적게 만들어 주기 때문에 이것을 사용하지 않았을 때 보다 더 깔끔하고, 간편하게 개발 할 수 있다.
-```java
-//
-```
+
