@@ -223,6 +223,7 @@ Client -> HTTP Request -> Dispatcher Servlet -> Handler Mapping
 
 ### 📌 @RequestBody
 - HTTP 요청의 body 내용을 전달받아 자바 객체로 변환/매핑하는 어노테이션
+  (POST/PUT)
 
 ### 📌 @Service
 - @Service는 계층 구조상 주로 비즈니스 영역을 담당하는 객체임을 표시하기 위해 사용<br/>
@@ -312,7 +313,85 @@ public class HelloController {
 @GetMapping, @PostMapping, @PutMapping, @DeleteMapping들은 
 Method에만 붙일 수 있다.
 
+### 📌 @ModelAttribute
+- 클라이언트가 전송하는 여러개의 파라미터들을 **1:1로 객체에 바인딩** 하여 다시 View로 넘겨서 출력하기 위해 사용되는 Object<br/>
+매핑시키는 파라미터의 타입이 객체의 **type과 일치하는지**를 포함한 다양한 검증진행 <br/>
+ex) 게시물 번호를 저장하는 int형 index 변수에 "1"이라는 String 값을 넣으면 BindException 발생 
+- @RequestBody의 경우 Json이나 XML을 Jackson과 같은 MessageConverter를 사용하면 변환하지만,
+이 어노테이션은 여러 개의 파라미터를 바로 java bean 객체로 mapping 시킴
+즉, JSP에서 form 태그를 통하여 전달받은 파라미터들은 객체로 바인딩 시키는 경우에 사용가능
 
+📒  @ModelAttribute와 @RequestBody의 차이점
+@ModelAttribute는 바인딩 시키는 어떤 데이터를 set 해주는 Setter 함수가 없다면 매핑이 되지 않는다.
+하지만 @RequestBody는 요청받은 데이터를 변환시키는 것이기 때문에, Setter 함수가 없어도 매핑이된다.
 
+### 📌 @RequestParam
+- 요청 파라미터를 메소드에서 1:1로 받기 위해 사용<br/>
+@RequestParam을 사용하면 기본적으로 반드시 해당 파라미터가 전송되어야 함
+- 사용자가 원하는 매개변수에 mapping 하기 위해서 사용
 
+### 📌 @Data
+- @Getter, @Setter, @RequiredArgsConstructor, @ToString, @EqualsAndHashCode을 한꺼번에 설정가능
+- 모든 필드를 대상으로 접근자와 설정자가 자동으로 생성
+1. @Getter @Setter <br/>
+ex)
+```  
+@Getter @Setter
+private String name;
+```
 
+2. @RequiredArgsConstructor (생성자 자동 생성)  <br/>
+- @NoArgsConstructor: 파라미터가 없는 기본 생성자를 생성 <br/> 
+- @AllArgsConstructor: 모든 필드 값을 파라미터로 받는 생성자 생성 <br/>
+- @RequiredArgsConstructor: final이나 @NonNull인 필드 값만 파라미터로 받는 생성자 생성<br/>
+
+ex)
+```  
+@NoArgsConstructor
+@RequiredArgsConstructor
+@AllArgsConstructor
+public class User {
+  private Long id;
+  @NonNull
+  private String username;
+  @NonNull
+  private String password;
+  private int[] scores;
+}
+```
+결과
+```  
+User user1 = new User(); //@NoArgs
+User user2 = new User("dale", "1234"); //@Required
+User user3 = new User(1L, "dale", "1234", null); //@AllArgs
+```
+
+3. @ToString
+- @ToString을 클래스에 붙여주면 toString() 자동으로 생성
+- exclude 속성을 사용하면, 특정 필드를 toString() 결과에서 제외시킬 수도 있음
+
+ex)
+```  
+@ToString(exclude = "password")
+public class User {
+  private Long id;
+  private String username;
+  private String password; //password는 string 적용 안 됨
+  private int[] scores;
+}
+```
+
+필드 셋팅
+```  
+User user = new User();
+user.setId(1L);
+user.setUsername("dale");
+user.setPassword(1234);
+user.setScores(new int[]{80, 70, 100});
+System.out.println(user);
+```
+
+결과
+```  
+User(id=1, username=dale, password=1234, scores=[80, 70, 100])
+```
