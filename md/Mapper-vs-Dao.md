@@ -1,11 +1,13 @@
 # 📢 DAO 란?
 > Data Access Object의 약어로 실질적으로 DB에 접근하여 데이터를 조회하거나 조작하는 기능을 전담하는 객체를 말한다. DAO의 사용 이유는 효율적인 커넥션 관리와 보안성 때문이다. DAO는 저수준의 Logic과 고급 비즈니스 Logic을 분리하고 domain logic으로부터 DB관련 mechanism을 숨기기 위해 사용한다.
 
+##  repository := dao (비슷함)
+>repotiroy는 엔티티 객체를 보관하고 관리하는 저장소이고, dao는 데이터에 접근하도록 DB접근 관련 로직을 모아둔 객체이다. 둘다 개념의 차이일뿐 실제로 개발할 때는 비슷하게 사용된다.
+
+
 # 📢 Mapper 란?
 > Mybatis 매핑XML에 기재된 SQL을 호출하기 위한 인터페이스이다. Mybatis3.0부터 생겼다.
 
-##  repository := dao (비슷함)
->repotiroy는 엔티티 객체를 보관하고 관리하는 저장소이고, dao는 데이터에 접근하도록 DB접근 관련 로직을 모아둔 객체이다. 둘다 개념의 차이일뿐 실제로 개발할 때는 비슷하게 사용된다.
 
 <br>
 
