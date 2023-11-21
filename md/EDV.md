@@ -51,7 +51,7 @@ public class MemberDto {
 
 ## `VO(Value Object)` 란?
 - 직역과 같이 값 그 자체를 표현하는 객체라는 의미 (값으로만 비교가 됨)
-  ex)  지폐의 경우 같은 만원이지만 고유번호가 다름(고유번호를 각 객제의 주소라고 생각) -> 하지만 다같은 만원임
+  ex)  지폐의 경우 같은 만원이지만 고유번호가 다름(고유번호를 각 객체의 주소라고 생각) -> 하지만 다같은 만원임
 - VO는 값 자체를 표현하기 때문에 불변객체이다
 - 따라서 getter 메소드는 가질수 있지만, setter 성격의 메서드는 포함X, 생성자를 만들어야함 (ReadOnly 특징을 가짐)
 - 비지니스 로직을 포함할 수 있음 <br/>
@@ -88,7 +88,7 @@ public class UserVo {
 <br/>
 ㄴ hashCode() 리턴값 -> (같음) -> equals() 리턴값 -> (true) -> 동등객체
 
-### `UserVo.java`
+### `VoTest.java`
 ```java
 public class VoTest {
 
