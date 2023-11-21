@@ -4,7 +4,6 @@
   (순수하게 데이터 전달 만을 위한 객체이기 때문) <br/>
   ㄴ 보내는 쪽에서 setter를 사용해 데이터를 DTO에 담아보내고 받는곳에서 getter를 사용해 전달받은 DTO로부터 데이터를 꺼내는 방식이다.
 - ex) 시험 볼 떄 OMR카드라고 생각, 답을 하나 다르게 쓰면 결과 값이 다름
-<br/>
 
 ### `DTO 예제 코드`
 #### `MemberDto.java`
@@ -71,7 +70,7 @@ public class UserVo {
   <br/>
   ㄴ hashCode() 리턴값 -> (같음) -> equals() 리턴값 -> (true) -> 동등객체
 
-#### `UserVo.java`
+#### `VoTest.java`
 ```java
 public class VoTest {
 
@@ -96,6 +95,7 @@ public class VoTest {
 <br/>✒️ 상속을 받거나 구현체여서는 안되며, DB 테이블내에 존재하지 않는 컬럼을 가져서도 안된다
 - 이를 기준으로 테이블이 생성되고 스키마가 변경됨 따라서, 절대로 Entity를 요청이나 응답값을 전달하는 클래스로 사용해선 X
 - Entity는 id로 구분되며, VO와 마찬가지로 비즈니스 로직을 포함할 수 있음
+#### `User.java`
 ```java
 @Entity
 @Builder
