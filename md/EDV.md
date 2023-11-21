@@ -139,8 +139,8 @@ public class User {
 	</tr>
     <tr>
 		<td>동등결정</td>
-        <td>속성값이 모두 같다고 해서 <br/> 같은 객체X</td>
-        <td>속성값이 모두 같으면 같은 <br/> 객체O</td>
+        <td>속성값이 모두 같다고 해서 같은 객체X</td>
+        <td>속성값이 모두 같으면 같은 객체O</td>
         <td></td>
 	</tr>
     <tr>
